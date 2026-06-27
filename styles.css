@@ -1,0 +1,43 @@
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{-webkit-font-smoothing:antialiased}
+
+  @font-face{font-family:'JejuDoldam';src:url("uploads/fonts/EF_jejudoldam(TTF).ttf") format("truetype");font-display:swap}
+
+  :root{
+    --paper-bg:repeating-linear-gradient(#e3ecf6 0 1px,transparent 1px 26px),repeating-linear-gradient(90deg,#e3ecf6 0 1px,transparent 1px 26px),#fbfcfe;
+    --paper-base:#fbfcfe;
+    --nav-paper:#ffffff;
+    --ink:#27333f;
+    --ink-soft:#27333f66;
+    --accent:#ff5b5b;
+    --tape:rgba(255,91,91,.5);
+    --hi:rgba(255,91,91,.22);
+    --hand:'Gaegu','Caveat',cursive;
+    --display:'JejuDoldam','Black Han Sans',sans-serif;
+    --headline:clamp(40px,6.4vw,82px);
+    --rot1:rotate(3deg);  --rot2:rotate(-3deg); --rot3:rotate(-2deg);
+    --rot4:rotate(2deg);  --rot5:rotate(-2deg); --rot6:rotate(2deg);
+    --frame-pad:46px; --frame-radius:3px; --photo-radius:1px;
+    --veil-opacity:0.18;
+    --veil-rgb:250,246,236;
+  }
+  body{background:var(--paper-base)}
+  a{color:inherit}
+  .doodle{font-family:var(--hand)}
+
+  /* edit mode affordance */
+  #content[contenteditable="true"]{outline:2px dashed var(--accent);outline-offset:-2px}
+  #content[contenteditable="true"] *{cursor:text}
+
+  @media (max-width:760px){
+    .grid-2{grid-template-columns:1fr !important}
+    .grid-3{grid-template-columns:1fr !important}
+    .grid-4{grid-template-columns:repeat(2,1fr) !important}
+    .nav-links{font-size:16px !important;gap:12px !important}
+    .nav-links .nav-text{display:none}
+    .hero-photos{min-height:300px !important;margin-top:20px}
+    .stay-photos{min-height:380px !important}
+    .doodle-abs{display:none !important}
+  }
